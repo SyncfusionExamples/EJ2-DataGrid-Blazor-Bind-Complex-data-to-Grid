@@ -1,0 +1,79 @@
+﻿@page "/"
+
+@using Syncfusion.EJ2.Blazor.DropDowns
+@using Syncfusion.EJ2.Blazor.Grids
+@using Syncfusion.EJ2.Blazor.Navigations
+
+<EjsGrid @ref="DefaultGrid" AllowPaging="true" DataSource="@order" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer ID" Width="90"></GridColumn>
+        <GridColumn Field="EmployeeID" HeaderText="Employee ID" Width="90"></GridColumn>
+        <GridColumn Field="Employee.Address" HeaderText="Address" Width="90"></GridColumn>
+        <GridColumn Field="Freight" HeaderText="Freight" Width="90"></GridColumn>
+    </GridColumns>
+</EjsGrid>
+@code{
+    List<Orders> data;
+
+    EjsGrid<Orders> DefaultGrid { get; set; }
+
+    public IQueryable<Orders> GridData { get; set; }
+    public List<Orders> order = new List<Orders>();
+    protected override void OnInitialized()
+    {
+        BindDataSource();
+        this.data = order;
+    }
+    private void BindDataSource()
+    {
+        int orderId = 10643;
+        int empId = 0;
+        for (int i = 1; i < 9; i++)
+        {
+            order.Add(new Orders(orderId + 1, "ALFKI", empId + 1, new EmployeeInfo("507 - 20th Ave. E.Apt. 2A"), 32.38, "Alfreds Futterkiste ", "Germany"));
+            order.Add(new Orders(orderId + 2, "ANATR", empId + 2, new EmployeeInfo("908 W. Capital Way"), 11.61, "Ana Trujillo Emparedados y helados", "Mexico"));
+            order.Add(new Orders(orderId + 3, "ANTON", empId + 3, new EmployeeInfo("722 Moss Bay Blvd."), 45.34, "Antonio Moreno Taquería", "Mexico"));
+            order.Add(new Orders(orderId + 4, "AROUT", empId + 4, new EmployeeInfo("4110 Old Redmond Rd."), 37.28, "Around the Horn", "UK"));
+            order.Add(new Orders(orderId + 5, "BERGS", empId + 5, new EmployeeInfo("7 Houndstooth Rd."), 67.00, "Berglunds snabbköp", "Sweden"));
+            order.Add(new Orders(orderId + 6, "BLONP", empId + 6, new EmployeeInfo("4726 - 11th Ave. N.E."), 23.32, "Blondel père et fils", "France"));
+            orderId += 6;
+            empId += 6;
+        }
+    }
+    public class Orders
+    {
+        public Orders()
+        {
+
+        }
+        public Orders(int orderId, string customerId, int empId, EmployeeInfo emp, double freight, string shipName, string shipCountry)
+        {
+            this.OrderID = orderId;
+            this.CustomerID = customerId;
+            this.EmployeeID = empId;
+            this.Employee = emp;
+            this.Freight = freight;
+            this.ShipName = shipName;
+            this.ShipCountry = shipCountry;
+        }
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public int EmployeeID { get; set; }
+        public EmployeeInfo Employee { get; set; }
+        public double Freight { get; set; }
+        public string ShipName { get; set; }
+        public string ShipCountry { get; set; }
+    }
+    public class EmployeeInfo
+    {
+        public string Address { get; set; }
+        public EmployeeInfo(string Add)
+        {
+            this.Address = Add;
+        }
+    }
+}
+
+
