@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindComplexDataToGrid", "BindComplexDataToGrid.csproj", "{5BB43231-CE22-4DAC-B60C-8654A0AB0684}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BB43231-CE22-4DAC-B60C-8654A0AB0684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BB43231-CE22-4DAC-B60C-8654A0AB0684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BB43231-CE22-4DAC-B60C-8654A0AB0684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BB43231-CE22-4DAC-B60C-8654A0AB0684}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA530BD6-014D-4817-9619-F151EC15CA65}
+	EndGlobalSection
+EndGlobal
