@@ -1,1 +1,0 @@
-﻿ej.data.DataUtil.serverTimezoneOffset = 2;   //Set the servertimezoneoffset  
