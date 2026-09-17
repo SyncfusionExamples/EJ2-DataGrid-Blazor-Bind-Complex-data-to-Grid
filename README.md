@@ -15,8 +15,8 @@ This sample demonstrates how to bind complex object data to a Syncfusion Blazor 
 
 ## Prerequisites
 
-* Visual Studio 2022
-* Visual Studio Code
+* Visual Studio 2022 or Visual Studio Code
+* .NET SDK compatible with the project's target framework
 
 ## How to Run the Project
 
