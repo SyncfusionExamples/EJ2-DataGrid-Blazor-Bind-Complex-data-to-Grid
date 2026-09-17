@@ -16,16 +16,30 @@ This sample demonstrates how to bind complex object data to a Syncfusion Blazor 
 ## Prerequisites
 
 * Visual Studio 2022
+* Visual Studio Code
 
 ## How to Run the Project
 
-1. Checkout this project to a location in your disk.
-2. Open the solution file `BindComplexDataToGrid.sln` using Visual Studio 2022.
-3. Restore the NuGet packages by rebuilding the solution.
-4. Build the project successfully.
-5. Run the application.
-6. Navigate to the page hosting the Syncfusion Blazor DataGrid sample.
-7. Review how values from complex object structures are displayed within the Grid.
+**Visual Studio 2022**
+
+1. Clone or download the repository.
+2. Open the verified solution file: `CrudAsynchronousSample.sln`.
+3. Restore NuGet packages.
+4. Ensure the startup project is `CrudAsynchronousSample` if multiple startup projects are present.
+5. Build the solution.
+6. Run the application using `Ctrl+F5`.
+7. Access the application at the local URL displayed by the ASP.NET Core launch output. `[VERIFY: local development URL]`
+
+**Visual Studio Code**
+
+1. Open the repository folder in Visual Studio Code.
+2. Open the integrated terminal.
+3. Navigate to the project directory that contains `CrudAsynchronousSample.csproj`.
+
+```bash
+dotnet restore
+dotnet run
+```
 
 ## Project Structure
 
