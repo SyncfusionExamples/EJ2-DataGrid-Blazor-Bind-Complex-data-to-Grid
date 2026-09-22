@@ -2,7 +2,7 @@
 
 ## Overview
 
-This sample demonstrates how to bind complex object data to a Syncfusion Blazor DataGrid. Instead of using a collection that contains only primitive properties, the Grid is configured to consume records that contain nested or related objects and display values from those complex structures. This pattern is useful when application data is represented through rich domain models and Grid columns must access values from object hierarchies rather than flat data sources.
+This sample demonstrates how to bind complex object data to a Syncfusion [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid). Instead of using a collection that contains only primitive properties, the Grid is configured to consume records that contain nested or related objects and display values from those complex structures. This pattern is useful when application data is represented through rich domain models and Grid columns must access values from object hierarchies rather than flat data sources.
 
 ## Key Features
 
